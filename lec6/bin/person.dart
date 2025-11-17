@@ -1,6 +1,6 @@
 enum Gender { male, female }
 
-class Person {
+ abstract class Person {
   late String fName;
   late String LName;
   late Gender gender;
@@ -27,16 +27,22 @@ class Person {
 
   }
   //Fuction  take person   and covert it to map
-  toMap() {
+ /* toMap() {
     return {"firstname": fName,
     "lastname":LName,
     'isMale':gender==Gender.male?true:false,
     
      "ageInyear": ageInyear};
   } //return person as map
+  */
 
   //function
   int ageInMinth() {
     return (ageInyear ?? 0 * 12);
   }
+  //abstraction (method doesnt contain body , dont have implementation )
+  // if there at least one abstract methodthen all the class called abstarct class (no abstract method in a normal class)
+  //we can inheret abstract class but we cant make instance from it 
+      Map<String , dynamic> toMap() ;
+      
 }
